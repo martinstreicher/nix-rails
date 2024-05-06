@@ -266,22 +266,6 @@
     };
     version = "2.2.1";
   };
-  error_highlight = {
-    groups = ["development"];
-    platforms = [{
-      engine = "maglev";
-    } {
-      engine = "rbx";
-    } {
-      engine = "ruby";
-    }];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "1cvjkkg6g1rffnph0xjz8w48293igack0xcp03hmjxr3rj4773a5";
-      type = "gem";
-    };
-    version = "0.6.0";
-  };
   erubi = {
     groups = ["default" "development"];
     platforms = [];
