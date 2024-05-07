@@ -5,20 +5,22 @@ let
     }) { };
 
   targetRuby = nixpkgs.ruby_3_2;
-    myBundler = nixpkgs.bundler.override {
-      ruby = targetRuby;
-    };
+
+  myBundler = nixpkgs.bundler.override {
+    ruby = targetRuby;
+  };
 
   gems =
     nixpkgs.bundlerEnv {
       inherit (nixpkgs) ruby_3_2;
 
-      name = "rails-gems";
-      gemfile = ./Gemfile;
-      bundler = myBundler;
+      name     = "rails-gems";
+      bundler  = myBundler;
+      gemfile  = ./Gemfile;
       lockfile = ./Gemfile.lock;
-      gemset = ./gemset.nix;
+      gemset   = ./gemset.nix;
     };
+
 in
   nixpkgs.mkShell {
     buildInputs = [
