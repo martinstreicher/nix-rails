@@ -266,22 +266,6 @@
     };
     version = "2.2.1";
   };
-  error_highlight = {
-    groups = ["development"];
-    platforms = [{
-      engine = "maglev";
-    } {
-      engine = "rbx";
-    } {
-      engine = "ruby";
-    }];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "1cvjkkg6g1rffnph0xjz8w48293igack0xcp03hmjxr3rj4773a5";
-      type = "gem";
-    };
-    version = "0.6.0";
-  };
   erubi = {
     groups = ["default" "development"];
     platforms = [];
@@ -309,10 +293,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0lbm33fpb3w06wd2231sg58dwlwgjsvym93m548ajvl6s3mfvpn7";
+      sha256 = "1ffix518y7976qih9k1lgnc17i3v6yrlh0a3mckpxdb4wc2vrp16";
       type = "gem";
     };
-    version = "1.14.4";
+    version = "1.14.5";
   };
   importmap-rails = {
     dependencies = ["actionpack" "activesupport" "railties"];
